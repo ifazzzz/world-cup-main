@@ -38,8 +38,15 @@ main{
    background-color: #DD0000;
    color: #ffffff;
    padding: 18px 32px;
+   border-radius:10px;
 }
-
+/* -------animation------- */
+.img-footballer{
+    transition: transform 0.5s;
+}
+.img-footballer:hover{
+    transform: scale(1.4);
+}
 /* ------------contents and news
 --------------------- */
 .content-wrapper{
@@ -54,16 +61,9 @@ main{
     grid-gap: 8px;
     margin-top: 28px;
     position: relative;
-    left: 318px;
+    left: 340px;
 }
-.content-wrapper-3{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 8px;
-    margin-top: 28px;
-    position: relative;
-    left: 318px;
-}
+
 /* ---------sidebar styling----------- */
 .sidebar {
     background-color: #161616;
@@ -108,34 +108,40 @@ main{
     font-weight: bold;
 }
 /* -------------transfer content styling----------- */
-
-.transfer-news {
+.match-fixture{
+    border: 1px solid #E8E8E8;
+    padding: 10px;
+}
+.fixture-container{
     width: 312px;
-    height: 362px;
+    height: 312px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: 1px solid #E8E8E8;
-    border-radius: 10px;
+    justify-content:center;
 }
-.transfer-banner{
-    width: 100%;
-    margin-top: -60px;
+.teams{
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+    margin-bottom:12px;
 }
-.transfer-talk {
-    padding: 10px;
-    margin-top:10px;
+.shcedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
 }
-.transfer-btn {
-    border: 1px solid #161616;
-    padding: 2px 16px;
-    border-radius: 10px;
+.hidden-content{
+    margin: 60px auto;
 }
-span{
-    margin-left: 20px;
+.view-all-btn{
+    background-color: #DD0000;
+    padding: 10px 16px;
+    border-radius:10px;
+    color: #ffffff;
+    visibility: hidden;
 }
-
 /* ------footer-----------
 ---------styling-------- */
 
@@ -167,3 +173,41 @@ span{
     color: #ffffff;
     margin-right: 20px;
 }
+/* -------media--------------------
+--------------queries----------- */
+
+/* -----tablet devices-------- */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container{
+        width: 754px;
+    }
+    .content-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content-wrapper-2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .sidebar{
+        background-color: #ffffff;
+    }
+    }
+
+
+/* --------mobile devices----------- */
+
+@media screen and (max-width: 767px) {
+    .container{
+        width: 554px;
+    }
+    .content-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content-wrapper-2{
+        display: none;
+    }
+    .sidebar{
+        background-color: #ffffff;
+    }
+    }
+

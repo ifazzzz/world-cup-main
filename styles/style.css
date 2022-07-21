@@ -5,6 +5,7 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+ 
 }
 main{
     display: flex;
@@ -19,7 +20,7 @@ main{
     background-color: #161616;
     width: 1321px;
     border-radius: 30px;
-    margin-top: 50px;
+    margin: 50px auto;
 }
 .wrapper{
     display: flex;
@@ -38,6 +39,15 @@ main{
    background-color: #DD0000;
    color: #ffffff;
    padding: 18px 32px;
+   border-radius: 10px;
+}
+
+/* -------animation------- */
+.img-footballer{
+    transition: transform 0.5s;
+}
+.img-footballer:hover{
+    transform: scale(1.4);
 }
 
 /* ------------contents and news
@@ -135,6 +145,16 @@ main{
 span{
     margin-left: 20px;
 }
+.hidden-content{
+    margin: 60px auto;
+}
+.view-all-btn{
+    background-color: #DD0000;
+    padding: 10px 16px;
+    border-radius:10px;
+    color: #ffffff;
+    visibility: hidden;
+}
 
 /* ------footer-----------
 ---------styling-------- */
@@ -167,3 +187,49 @@ span{
     color: #ffffff;
     margin-right: 20px;
 }
+/* -------media--------------------
+--------------queries----------- */
+
+/* -----tablet devices-------- */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container{
+        width: 754px;
+    }
+    .content-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content-wrapper-2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content-wrapper-3{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .sidebar{
+        background-color: #ffffff;
+    }
+    .view-all-btn{
+        visibility: visible;
+    }
+}
+
+/* --------mobile devices----------- */
+
+@media screen and (max-width: 767px) {
+    .container{
+        width: 554px;
+    }
+    .content-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content-wrapper-2{
+        display: none;
+    }
+    .content-wrapper-3{
+        display: none;
+    }
+    .sidebar{
+        background-color: #ffffff;
+    }
+    }
+
